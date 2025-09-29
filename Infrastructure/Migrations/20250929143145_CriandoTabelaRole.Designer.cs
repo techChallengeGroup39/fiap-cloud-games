@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250929124546_CriandoTabelaRole")]
+    [Migration("20250929143145_CriandoTabelaRole")]
     partial class CriandoTabelaRole
     {
         /// <inheritdoc />
@@ -39,8 +39,12 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("DATETIME");
 
+                    b.Property<DateTime?>("DataModificacao")
+                        .HasColumnType("DATETIME");
+
                     b.Property<string>("ModificadoPor")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("NVARCHAR(100)");
 
                     b.Property<string>("Nome")
                         .IsRequired()

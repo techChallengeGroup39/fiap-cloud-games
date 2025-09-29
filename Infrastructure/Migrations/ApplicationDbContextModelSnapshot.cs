@@ -36,8 +36,12 @@ namespace Infrastructure.Migrations
                     b.Property<DateTime>("DataCriacao")
                         .HasColumnType("DATETIME");
 
+                    b.Property<DateTime?>("DataModificacao")
+                        .HasColumnType("DATETIME");
+
                     b.Property<string>("ModificadoPor")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("NVARCHAR(100)");
 
                     b.Property<string>("Nome")
                         .IsRequired()

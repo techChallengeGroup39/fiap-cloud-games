@@ -13,11 +13,11 @@ namespace Infrastructure.Repository
             _connectionString = connectionString;
         }
 
-        public ApplicationDbContext()
-        {
-            
-        }
-        /*
+        //Usado para migrations
+        //public ApplicationDbContext()
+        //{
+        //}
+
         public ApplicationDbContext()
         {
             IConfiguration configuration = new ConfigurationBuilder()
@@ -26,7 +26,7 @@ namespace Infrastructure.Repository
                 .Build();
             _connectionString = configuration.GetConnectionString("ConnectionString");
         }
-        */
+
 
 
 

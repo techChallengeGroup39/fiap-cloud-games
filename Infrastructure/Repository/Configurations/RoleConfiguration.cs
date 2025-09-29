@@ -15,6 +15,8 @@ namespace Infrastructure.Repository.Configurations
             builder.Property(r => r.Nome).HasColumnType("NVARCHAR(100)").IsRequired().HasMaxLength(100);
             builder.Property(r => r.DataCriacao).HasColumnType("DATETIME").IsRequired();
             builder.Property(r => r.CriadoPor).HasColumnType("NVARCHAR(100)").IsRequired().HasMaxLength(100);
+            builder.Property(r => r.ModificadoPor).HasColumnType("NVARCHAR(100)").HasMaxLength(100);
+            builder.Property(r => r.DataModificacao).HasColumnType("DATETIME");
             builder.Property(r => r.Status).HasColumnType("INT").IsRequired();
         }
     }

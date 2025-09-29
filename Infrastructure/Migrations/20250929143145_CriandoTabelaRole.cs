@@ -19,7 +19,8 @@ namespace Infrastructure.Migrations
                     Nome = table.Column<string>(type: "NVARCHAR(100)", maxLength: 100, nullable: false),
                     DataCriacao = table.Column<DateTime>(type: "DATETIME", nullable: false),
                     CriadoPor = table.Column<string>(type: "NVARCHAR(100)", maxLength: 100, nullable: false),
-                    ModificadoPor = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ModificadoPor = table.Column<string>(type: "NVARCHAR(100)", maxLength: 100, nullable: true),
+                    DataModificacao = table.Column<DateTime>(type: "DATETIME", nullable: true),
                     Status = table.Column<int>(type: "INT", nullable: false)
                 },
                 constraints: table =>
